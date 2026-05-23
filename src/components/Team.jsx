@@ -26,12 +26,12 @@ const members = [
   },
   {
     initials: 'FA',
-    photo: null, // swap with '/team/fathir.jpg' when ready
+    photo: "/team/deo.jpeg", // swap with '/team/fathir.jpg' when ready
     name: 'Fathir Ade Deo',
     title: 'Web Developer & Data Analyst',
     quote: "Every dataset tells a story. I help turn raw numbers into decisions that actually matter.",
     skills: ['React', 'Laravel', 'Python', 'MySQL', 'Data Analysis'],
-    github: null,
+    github: 'https://github.com/LuxCaspian/',
     linkedin: null,
     gradient: 'grad-blue',
   },
