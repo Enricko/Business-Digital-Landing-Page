@@ -15,7 +15,7 @@ const members = [
   },
   {
     initials: 'ZH',
-    photo: "/team/yama.jpeg", // swap with '/team/zhafif.jpg' when ready
+    photo: "/team/yama.png", // swap with '/team/zhafif.jpg' when ready
     name: 'Zhafif Hylmi Naryama',
     title: 'Designer, Developer & Data Analyst',
     quote: "Good design speaks before words do. I make sure what you see is as powerful as what you build.",
