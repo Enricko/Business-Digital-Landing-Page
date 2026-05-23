@@ -15,12 +15,12 @@ const members = [
   },
   {
     initials: 'ZH',
-    photo: null, // swap with '/team/zhafif.jpg' when ready
+    photo: "/team/yama.jpeg", // swap with '/team/zhafif.jpg' when ready
     name: 'Zhafif Hylmi Naryama',
     title: 'Designer, Developer & Data Analyst',
     quote: "Good design speaks before words do. I make sure what you see is as powerful as what you build.",
     skills: ['React', 'Laravel', 'Figma', 'Blender', 'Python', 'CSS/HTML', 'Data Analysis'],
-    github: null,
+    github: 'https://github.com/Ymr76',
     linkedin: null,
     gradient: 'grad-pink',
   },
