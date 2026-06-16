@@ -295,3 +295,45 @@ section {
   .section-title { font-size: 2rem; margin-bottom: 2rem; }
   .btn { padding: 0.75rem 1.5rem; }
 }
+
+/* Offset anchor scroll so sections aren't hidden behind the fixed navbar */
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Visible keyboard focus on all interactive elements */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Required-field indicator in forms */
+.req {
+  color: var(--accent-tertiary);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

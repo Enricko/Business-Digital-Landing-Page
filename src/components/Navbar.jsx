@@ -31,7 +31,12 @@ export default function Navbar() {
           <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.25rem', fontSize: '0.9rem' }}>
             Hire Us
           </a>
-          <button className="mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <button
+            className="mobile-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

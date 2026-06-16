@@ -74,6 +74,10 @@
   border: none;
   color: var(--text-primary);
   cursor: pointer;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -97,6 +101,6 @@
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
 }

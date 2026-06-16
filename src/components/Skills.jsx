@@ -32,7 +32,7 @@ export default function Skills() {
         <div className="skills-grid">
           {allSkills.map((skill, idx) => (
             <div key={idx} className="logo-card reveal-on-scroll" style={{ transitionDelay: `${(idx % 10) * 50}ms` }} title={skill.name}>
-              <img src={skill.icon} alt={skill.name} className="skill-logo" />
+              <img src={skill.icon} alt={`${skill.name} logo`} className="skill-logo" width="64" height="64" loading="lazy" decoding="async" />
               <div className="skill-name-overlay">
                 <span>{skill.name}</span>
               </div>

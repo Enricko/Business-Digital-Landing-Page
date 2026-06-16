@@ -56,7 +56,7 @@ export default function Team() {
               <div className={`member-photo-wrap ${member.gradient}`}>
                 <div className="member-photo-inner">
                   {member.photo
-                    ? <img src={member.photo} alt={member.name} className="member-photo-img" />
+                    ? <img src={member.photo} alt={member.name} className="member-photo-img" width="120" height="120" loading="lazy" decoding="async" />
                     : <span className="member-initials">{member.initials}</span>
                   }
                 </div>

@@ -4,10 +4,11 @@ import './Contact.css';
 export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const message = e.target.message.value;
-    
+    const data = new FormData(e.target);
+    const name = data.get('name');
+    const email = data.get('email');
+    const message = data.get('message');
+
     const subject = encodeURIComponent(`HexTech Project Inquiry from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     
@@ -41,18 +42,18 @@ export default function Contact() {
 
           <form className="glass-card contact-form reveal-on-scroll delay-300" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
+              <label htmlFor="name">Name <span className="req">*</span></label>
+              <input type="text" id="name" name="name" autoComplete="name" placeholder="John Doe" required />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
+              <label htmlFor="email">Email <span className="req">*</span></label>
+              <input type="email" id="email" name="email" autoComplete="email" placeholder="john@example.com" required />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+              <label htmlFor="message">Message <span className="req">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
             </div>
             
             <button type="submit" className="btn btn-primary submit-btn">
